@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Laporan_Pengambilan_Tugas" language="groovy" pageWidth="806" pageHeight="595" orientation="Landscape" columnWidth="766" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c10d154e-70ea-4da2-a855-2b5fc440c3fa">
+	<property name="ireport.zoom" value="1.0000000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     formambil.`no_form` AS formambil_no_form,
+     formambil.`kd_tgs` AS formambil_kd_tgs,
+     formambil.`nm_tgs` AS formambil_nm_tgs,
+     formambil.`ket_tgs` AS formambil_ket_tgs,
+     formambil.`prior` AS formambil_prior,
+     formambil.`nip` AS formambil_nip,
+     formambil.`nm_peg` AS formambil_nm_peg,
+     formambil.`divisi` AS formambil_divisi
+FROM
+     `formambil` formambil]]>
+	</queryString>
+	<field name="formambil_no_form" class="java.lang.String"/>
+	<field name="formambil_kd_tgs" class="java.lang.String"/>
+	<field name="formambil_nm_tgs" class="java.lang.String"/>
+	<field name="formambil_ket_tgs" class="java.lang.String"/>
+	<field name="formambil_prior" class="java.lang.String"/>
+	<field name="formambil_nip" class="java.lang.String"/>
+	<field name="formambil_nm_peg" class="java.lang.String"/>
+	<field name="formambil_divisi" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="139" splitType="Stretch">
+			<staticText>
+				<reportElement x="204" y="43" width="439" height="20" uuid="65ae43ca-681a-451f-b40d-196e014a0751"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<text><![CDATA[L'Avenue Office Tower, lt.12 Unit C, Jl.Raya Pasar Minggu ,Kav.16]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" mode="Opaque" x="61" y="96" width="657" height="33" backcolor="#B7DC59" uuid="490af9eb-c8db-43bc-993c-4342194aa361"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="28"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PENGAMBILAN TUGAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="65" width="427" height="20" uuid="e0d6a301-6024-4877-8dc8-6042593405f0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Pancoran,Jakarta Selatan DKI Jakarta. 12780 Telp.(021)80667022]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="20" width="184" height="55" uuid="cf3833d8-813d-49d5-bfd3-6f37c3035763"/>
+				<imageExpression><![CDATA["D:\\File kuliah\\Semester 6\\Pemrograman Visual\\project\\Netbeansproject\\Demo_Program\\src\\Gambar\\logo protonema2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="216" y="10" width="370" height="33" uuid="1076a858-3872-4f3e-a210-07b7618cb88d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="28"/>
+				</textElement>
+				<text><![CDATA[PT.PROTONEMA]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="85" width="739" height="1" uuid="488ee84e-ea49-4be5-8bfd-9f42a240d531"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="764" height="1" uuid="9e1684a0-8b40-4b9d-9759-730018424d40"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="83" height="15" uuid="fe858443-53b5-4fe7-987e-946e9f8558ef"/>
+				<text><![CDATA[No. Form]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="69" y="19" width="80" height="15" uuid="de03cb4b-fe51-4258-afb9-a78ef31b5bd8"/>
+				<text><![CDATA[Kode Tugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="162" y="19" width="87" height="15" uuid="c46a1fe7-0262-4c49-901a-8bf9cfd8ba60"/>
+				<text><![CDATA[Nama Tugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="249" y="19" width="69" height="15" uuid="e0e252e3-ebd8-4e2f-b85b-7b5dc4522738"/>
+				<text><![CDATA[Keterangan Tugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="373" y="19" width="84" height="15" uuid="ba670141-bd25-40d2-881d-eb2c570182ed"/>
+				<text><![CDATA[Prioritas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="457" y="19" width="69" height="15" uuid="fd700d8d-8a7e-4c56-a839-e54f7a62577e"/>
+				<text><![CDATA[NIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="527" y="19" width="117" height="15" uuid="32db2391-12b8-46d0-92dd-dd59133d4bb3"/>
+				<text><![CDATA[Nama Pegawai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="655" y="19" width="69" height="15" uuid="6be0c1ff-756b-4375-be0b-f6e471c4d87d"/>
+				<text><![CDATA[Divisi]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="764" height="1" uuid="cad09a47-d2a8-4a90-a524-8b9f0c614eb5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="69" height="15" uuid="fbafadc1-59e0-41cd-886a-8bfe3ef44f29"/>
+				<textFieldExpression><![CDATA[$F{formambil_no_form}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="69" y="0" width="69" height="15" uuid="3c1d4ba0-5e3c-4524-a052-af52c377d9f3"/>
+				<textFieldExpression><![CDATA[$F{formambil_kd_tgs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="162" y="0" width="87" height="15" uuid="5ead663c-5dac-4b1b-94e6-ec41825d58f5"/>
+				<textFieldExpression><![CDATA[$F{formambil_nm_tgs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="249" y="0" width="124" height="15" uuid="bbeeb9e8-6830-4fdf-96e6-83a8ac00d9b7"/>
+				<textFieldExpression><![CDATA[$F{formambil_ket_tgs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="373" y="0" width="84" height="15" uuid="eb634fc5-cc64-4cf3-9129-3dc26c4dcb86"/>
+				<textFieldExpression><![CDATA[$F{formambil_prior}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="527" y="0" width="117" height="15" uuid="8257fb33-1287-4074-a257-3a01089982eb"/>
+				<textFieldExpression><![CDATA[$F{formambil_nm_peg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="655" y="0" width="109" height="15" uuid="1749dd41-af39-4ace-95a7-b6bcfbbb8aa2"/>
+				<textFieldExpression><![CDATA[$F{formambil_divisi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="457" y="1" width="104" height="15" uuid="d961465e-f1c4-4054-a1b5-b2c6147d7ef9"/>
+				<textFieldExpression><![CDATA[$F{formambil_nip}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="88" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="764" height="1" uuid="44484c60-e2c0-4009-9331-6d08b5f45e20"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="583" y="0" width="100" height="20" uuid="5c01d4f1-3fd8-44b5-b396-9c5597054635"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="620" y="0" width="144" height="20" forecolor="#000000" uuid="f229f073-44ec-4c38-bf92-da2ccdc35177"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((new SimpleDateFormat("EEEEE dd MMMM yyyy", new Locale("id","ID"))).format(new java.util.Date()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="635" y="63" width="118" height="20" uuid="de3f3012-3f66-4e79-8232-263e2c030b47"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Septian Tri Wibowo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="635" y="20" width="129" height="20" uuid="d4bee510-f81f-40ca-a5c5-ac18ba2ca94c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Operational Manager]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="644" y="0" width="80" height="20" uuid="1f6adbea-1767-4c02-99ee-a6473f2dd448"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="724" y="0" width="40" height="20" uuid="b8d888c5-56cb-4119-8443-17bc96c9f865"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

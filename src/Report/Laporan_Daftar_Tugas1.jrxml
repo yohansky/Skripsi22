@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Laporan_Daftar_Tugas1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5ad7b12f-5139-4ce6-81c1-520766d8f146">
+	<property name="ireport.zoom" value="1.0000000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tugas.`kd_tgs` AS tugas_kd_tgs,
+     tugas.`nm_tgs` AS tugas_nm_tgs,
+     tugas.`ket_tgs` AS tugas_ket_tgs,
+     tugas.`prior` AS tugas_prior,
+     tugas.`status` AS tugas_status
+FROM
+     `tugas` tugas]]>
+	</queryString>
+	<field name="tugas_kd_tgs" class="java.lang.String"/>
+	<field name="tugas_nm_tgs" class="java.lang.String"/>
+	<field name="tugas_ket_tgs" class="java.lang.String"/>
+	<field name="tugas_prior" class="java.lang.String"/>
+	<field name="tugas_status" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="135" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" mode="Opaque" x="10" y="96" width="532" height="33" backcolor="#B7DC59" uuid="ae6ceb29-c7ce-48a2-8635-4d2dd56d35c1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="28"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DAFTAR TUGAS]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="10" width="104" height="43" uuid="0307e8f8-c387-4a4f-ae78-aaeea7f94b82"/>
+				<imageExpression><![CDATA["D:\\File kuliah\\Semester 6\\Pemrograman Visual\\project\\Netbeansproject\\Demo_Program\\src\\Gambar\\logo protonema2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="126" y="10" width="370" height="33" uuid="9c13e169-0f58-47e1-b436-b0eb62da6d3f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[PT.PROTONEMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="114" y="43" width="439" height="20" uuid="a0d4bcc0-a566-426c-8ea9-4d76d741fd25"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[L'Avenue Office Tower, lt.12 Unit C, Jl.Raya Pasar Minggu ,Kav.16]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="65" width="427" height="20" uuid="ae7de1cf-f658-4f8d-bb37-58f5a2c355db"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Pancoran,Jakarta Selatan DKI Jakarta. 12780 Telp.(021)80667022]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="85" width="532" height="1" uuid="6bcb9a18-3859-4395-869e-161d5a2860ca"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="16d38817-2441-46cc-b42f-7c4309417cab"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="111" height="15" uuid="1e464968-196d-4a58-879c-bc82d3b624e0"/>
+				<text><![CDATA[Kode Tugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="111" y="19" width="111" height="15" uuid="670c1f84-94bc-4286-821e-f9af7f1ae765"/>
+				<text><![CDATA[Nama Tugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="222" y="19" width="111" height="15" uuid="16425d24-10d7-4d42-9db0-217d3d0d941c"/>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="333" y="19" width="111" height="15" uuid="7f1b4a64-02ff-4886-845c-3d24f7acba62"/>
+				<text><![CDATA[Prioritas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="19" width="111" height="15" uuid="8addaac3-6541-4418-b019-946ff2d7c10f"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="263802d3-c8f9-4f65-849b-8caba38a1d1e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="111" height="15" uuid="cfdba214-46b4-428e-bb6d-75723071125a"/>
+				<textFieldExpression><![CDATA[$F{tugas_kd_tgs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="111" y="0" width="111" height="15" uuid="32e7c4be-15f6-47b4-a044-841ed742d15d"/>
+				<textFieldExpression><![CDATA[$F{tugas_nm_tgs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="222" y="0" width="111" height="15" uuid="bc35d068-d5d6-40b8-bb91-dd60ac92a3d7"/>
+				<textFieldExpression><![CDATA[$F{tugas_ket_tgs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="333" y="0" width="111" height="15" uuid="ffb97d9b-3dc4-4183-9b35-69a62c607940"/>
+				<textFieldExpression><![CDATA[$F{tugas_prior}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="444" y="0" width="111" height="15" uuid="5b23385d-f4f4-4827-bc9c-ee5a02de73bd"/>
+				<textFieldExpression><![CDATA[$F{tugas_status}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="85" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="a268ed2b-b08a-4929-ba53-84565302e552"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="376" y="2" width="100" height="20" uuid="5555deca-94c1-4d45-a46d-9bbf95456939"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="413" y="2" width="144" height="20" forecolor="#000000" uuid="4d513459-f164-4bee-8ec1-5aeaf3e47bf8"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((new SimpleDateFormat("EEEEE dd MMMM yyyy", new Locale("id","ID"))).format(new java.util.Date()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="413" y="22" width="129" height="20" uuid="10742584-5fbe-4434-af47-7ff43bb9f35d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Operational Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="65" width="118" height="20" uuid="7d40e6cd-c4a1-4f35-a171-a1200d574abd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Septian Tri Wibowo]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="b60bda55-ec77-4dcd-b465-d5c60c83c4b8"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="0a5f474a-30de-43ed-a4aa-eac587ce392a"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

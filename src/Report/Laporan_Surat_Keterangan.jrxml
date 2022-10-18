@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Laporan_Surat_Keterangan" language="groovy" pageWidth="813" pageHeight="595" orientation="Landscape" columnWidth="773" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="108657e9-9c11-418c-80b7-3be7edf9e75c">
+	<property name="ireport.zoom" value="1.2100000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     sk.`no_sk` AS sk_no_sk,
+     sk.`no_bp` AS sk_no_bp,
+     sk.`nip` AS sk_nip,
+     sk.`nm_peg` AS sk_nm_peg,
+     sk.`kd_tgs` AS sk_kd_tgs,
+     sk.`nm_tgs` AS sk_nm_tgs,
+     sk.`tenggat` AS sk_tenggat
+FROM
+     `sk` sk]]>
+	</queryString>
+	<field name="sk_no_sk" class="java.lang.String"/>
+	<field name="sk_no_bp" class="java.lang.String"/>
+	<field name="sk_nip" class="java.lang.String"/>
+	<field name="sk_nm_peg" class="java.lang.String"/>
+	<field name="sk_kd_tgs" class="java.lang.String"/>
+	<field name="sk_nm_tgs" class="java.lang.String"/>
+	<field name="sk_tenggat" class="java.sql.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="139" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" mode="Opaque" x="61" y="96" width="657" height="33" backcolor="#B7DC59" uuid="d0e73d12-76e9-4b16-aac5-6a9cf75ce7e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="28"/>
+				</textElement>
+				<text><![CDATA[LAPORAN SURAT KETERANGAN]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="20" width="184" height="55" uuid="56866275-bca8-4746-a6f6-d4a63bbf7bc9"/>
+				<imageExpression><![CDATA["D:\\File kuliah\\Semester 6\\Pemrograman Visual\\project\\Netbeansproject\\Demo_Program\\src\\Gambar\\logo protonema2.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="216" y="10" width="370" height="33" uuid="f3ee0b15-7a1a-4713-9459-0d6fbc97442e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="28"/>
+				</textElement>
+				<text><![CDATA[PT.PROTONEMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="204" y="43" width="439" height="20" uuid="de7e61a5-cf63-4e6b-8553-98ca18ae2fe4"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15"/>
+				</textElement>
+				<text><![CDATA[L'Avenue Office Tower, lt.12 Unit C, Jl.Raya Pasar Minggu ,Kav.16]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="65" width="427" height="20" uuid="f91a3e7d-5934-4c3f-b787-a049a6b66717"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Pancoran,Jakarta Selatan DKI Jakarta. 12780 Telp.(021)80667022]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="85" width="763" height="1" uuid="b04462d2-4689-404d-a3bf-24454cd2ddbf"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="773" height="1" uuid="617d92d5-ce14-445b-b230-44afadd8e894"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="124" height="15" uuid="5a5664a0-ed46-4b90-bb6b-6d0cc116e1a2"/>
+				<text><![CDATA[No. Surat Keterangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="134" y="19" width="136" height="15" uuid="40ee1baa-6e6d-4744-b555-8c5c966697d1"/>
+				<text><![CDATA[No. Bukti Pengambilan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="270" y="19" width="102" height="15" uuid="7cecd7a8-1d2c-4f1a-ba86-392763a7f46e"/>
+				<text><![CDATA[NIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="372" y="19" width="130" height="15" uuid="1cf427ef-7857-45d6-ae8c-97ad76c3023e"/>
+				<text><![CDATA[Nama Pegawai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="502" y="19" width="79" height="15" uuid="7f9e7bb9-646d-486d-9355-f864eda6b66b"/>
+				<text><![CDATA[Kode Tugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="581" y="19" width="106" height="15" uuid="7740bb71-80ec-4590-893c-9f749d724c8f"/>
+				<text><![CDATA[Nama Tugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="687" y="19" width="86" height="15" uuid="0902a269-f5f2-4db7-b446-94f35258e0a1"/>
+				<text><![CDATA[Tenggat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="773" height="1" uuid="e2dd183b-5378-4bc5-9318-36721b21cf20"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="79" height="15" uuid="9c8d08f9-1b1d-4d96-b710-700d753256b1"/>
+				<textFieldExpression><![CDATA[$F{sk_no_sk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="134" y="0" width="79" height="15" uuid="c354d2c7-03fb-4c4a-b9bd-aa1881560504"/>
+				<textFieldExpression><![CDATA[$F{sk_no_bp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="270" y="0" width="102" height="15" uuid="199f05ee-b4f2-4a4c-89f5-f019c9115c89"/>
+				<textFieldExpression><![CDATA[$F{sk_nip}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="372" y="0" width="130" height="15" uuid="ed3a6db0-ff9b-4542-abad-3619dca222ef"/>
+				<textFieldExpression><![CDATA[$F{sk_nm_peg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="502" y="0" width="79" height="15" uuid="06264819-0c70-47c2-89d9-3a17dee64340"/>
+				<textFieldExpression><![CDATA[$F{sk_kd_tgs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="581" y="0" width="106" height="15" uuid="cbdba60d-1ea1-4024-8830-c0d2913b2bb1"/>
+				<textFieldExpression><![CDATA[$F{sk_nm_tgs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="687" y="0" width="86" height="15" uuid="01c942e4-9a53-4f4e-898e-fa453130c817"/>
+				<textFieldExpression><![CDATA[$F{sk_tenggat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="92" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="773" height="1" uuid="2da7a5aa-3711-4f22-b18c-60db72acc229"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="592" y="3" width="100" height="20" uuid="6c77b48b-c553-4f2f-a3c7-d1308fe77d21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="629" y="3" width="144" height="20" forecolor="#000000" uuid="0a9512c8-4a94-4576-b135-498db14b886a"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((new SimpleDateFormat("EEEEE dd MMMM yyyy", new Locale("id","ID"))).format(new java.util.Date()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="653" y="66" width="118" height="20" uuid="b37a85de-a29e-437c-85a5-8a2ee4595541"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Septian Tri Wibowo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="653" y="23" width="129" height="20" uuid="64a996a8-dd4f-4678-be12-4fa94a452d3a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Operational Manager]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="653" y="0" width="80" height="20" uuid="74715d51-d871-4c54-9b99-c5d9200bb361"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="733" y="0" width="40" height="20" uuid="60147748-2565-470e-80cd-bf2e678e76c2"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
